@@ -1,4 +1,5 @@
 /**app.wxss**/
+
 .container {
   height: 100%;
   display: flex;
@@ -7,4 +8,68 @@
   justify-content: space-between;
   padding: 200rpx 0;
   box-sizing: border-box;
-} 
+}
+
+.xwl {
+  width: 98%;
+  margin: 0 auto;
+  overflow: hidden;
+  padding: 10px 0;
+  border-bottom: 1px dashed #e6e6e6;
+  height: 200rpx;
+}
+
+.xwt {
+  width: 20%;
+  float: left;
+  height: 150rpx;
+}
+
+.xwz {
+  width: 68%;
+  float: right;
+  height: 150rpx;
+}
+
+.xwzr {
+  width: 8%;
+  float: right;
+  height: 150rpx;
+}
+
+.wbt {
+  margin: 0;
+  line-height: 44px;
+}
+
+.wxq {
+  width: 100%;
+  line-height: 26px;
+  margin: 0;
+  color: #777;
+  height: 150rpx;
+}
+
+.xiu {
+  border-radius: 20rpx;
+  float: right;
+  height: 60rpx;
+  background: lightblue;
+  font-size: 30rpx;
+  line-height: 45rpx;
+  border: solid 1px #eee;
+  color: #fff;
+}
+
+.addq {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  border-radius: 20rpx;
+  height: 60rpx;
+  background: #e6e6e6;
+  font-size: 30rpx;
+  line-height: 45rpx;
+  border: solid 1px #eee;
+  color: #fff;
+}

@@ -11,26 +11,43 @@ App({
         if (res.code) {
           //发起网络请求
           wx.request({
-            url: 'http://apibeta.salesman.cc/wxlogin',
+            url: 'http://bn.sjy/wxlogin',
             data: {
-      code: res.code,
-          
+              code: res.code,
             },
             success: function (res) {
-
-             
+              wx.setStorageSync("sessionid", res.header["Set-Cookie"])
+              if (res.data.msg == 'not_bind') {
+                wx.showToast({
+                  title: '请先绑定',
+                  icon: 'loading',
+                  duration: 2000
+                })
+                setTimeout(() => {
+                  wx.navigateTo({
+                    url: '../content/content'
+                  })
+                }, 2000)
+              }else if(res.data.status == 'success'){
+                wx.navigateTo({
+                  url: '../question/add'
+                })
+              } 
+              
+              else {
+                wx.showToast({
+                  title: '网络错误请稍后重试',
+                  icon: 'loading',
+                  duration: 2000
+                })
+              }
             }
           })
         } else {
-          wx.showModal({
-            content: '这是一个模态弹窗',
-            success: function (res) {
-              if (res.confirm) {
-                console.log('用户点击确定')
-              } else if (res.cancel) {
-                console.log('用户点击取消')
-              }
-            }
+          wx.showToast({
+            title: '网络错误请稍后重试',
+            icon: 'loading',
+            duration: 2000
           })
         }
       }
