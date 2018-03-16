@@ -1,0 +1,27 @@
+<!-- <form bindsubmit="formSubmit" bindreset="formReset">
+ <view class="section">
+ 登录名：
+ <input class='inputcss' name="name"  />
+</view>
+  <view class="btn-area">
+  <button open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
+    <button bindtap="tapName">测试文章接口</button>
+     <button formType="submit">站点登录</button>
+    <button formType="reset">Reset</button>
+  </view>
+</form> -->
+
+<view class='xwrb' > 绑定站点用户</view>
+<view class="xwr">
+<form bindsubmit="formSubmit" bindreset="formReset">
+     <input name="user_name" class="jrxm" placeholder="登录名" />
+      <input name="password" password class="jrxm" placeholder="密码" />
+       <!-- <input name="input" class="jrxm" placeholder="验证码" /> -->
+       <!-- <input type='submit'  class="aniu"/> -->
+        <button formType="submit" class="aniu">站点登录</button>
+         <button bindtap="tapName">测试文章接口</button>
+        </form>
+    </view>
+
+
+

@@ -1,0 +1,31 @@
+<view style='margin-bottom:100rpx'>
+<button class='addq' bindtap="addquestion">添加</button>
+ </view>
+ <view >
+<view class="xwl"   wx:for="{{questionlist}}" wx:key="{{item.id}}">
+  <view class="xwt">
+    <image style='overflow:hidden;width:100%;height:150rpx;' src='http://m.guganjingying.cn/images/0882893c819a5d4cca62b60ef306b1a2.jpg' ></image>
+  </view>
+  <view class="xwz">
+    <view class="wxq">
+    {{item.question}}
+    </view>
+    <view class="wxqr">
+      <button class='xiu'>修改</button>
+    </view>
+  </view>
+</view>
+<view class="xwl" >
+  <view class="xwt">
+    <image style='overflow:hidden;width:100%;height:150rpx;' src='http://m.guganjingying.cn/images/0882893c819a5d4cca62b60ef306b1a2.jpg' alt="河南在哪学小吃餐饮培训加盟排骨精英美食？">gtrff</image>
+  </view>
+  <view class="xwz">
+    <view class="wxq">
+      河南在哪学小吃餐饮培训加盟排骨精英美食？
+    </view>
+    <view class="wxqr">
+      <button class='xiu'>修改</button>
+    </view>
+  </view>
+</view>
+</view>
