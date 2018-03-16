@@ -30,7 +30,7 @@ App({
                 }, 2000)
               }else if(res.data.status == 'success'){
                 wx.navigateTo({
-                  url: '../question/add'
+                  url: '../question/question'
                 })
               } 
               
