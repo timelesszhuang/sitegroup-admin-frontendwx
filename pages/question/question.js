@@ -1,6 +1,6 @@
 // pages/question/question.js
 
-var p = 10
+var p = 1
 var url = 'http://bn.sjy/wx_question';
 var GetList = function (that) {
   that.setData({
@@ -9,15 +9,15 @@ var GetList = function (that) {
   wx.request({
     url: url,
     data: {
-      page: 1,
-      rows: p,
+      page: p,
+      rows: 10,
     },
     header: {
       'content-type': 'application/json',// 默认值
       'cookie': wx.getStorageSync("sessionid")
     },
     success: function (res) {
-      var l = [];
+      var l =that.data.list ;
       for (var i = 0; i < res.data.data.rows.length; i++) {
         l.push(res.data.data.rows[i])
       }

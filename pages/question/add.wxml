@@ -1,0 +1,23 @@
+<view class='xwrb'> 添加问答</view>
+<view class="xwr">
+  <form bindsubmit="formSubmit" bindreset="formReset">
+    <input name="question" class="jrxm" placeholder="问题" bindchange="questionChange" />
+    <checkbox-group bindchange="checkboxChange">
+      <label class="checkbox" wx:for="{{items}}" wx:key="{{item.value}}">
+        <checkbox value="{{item.value}}" />{{item.name}}
+      </label>
+    </checkbox-group>
+    <textarea placeholder="答案" name="content_paragraph" class="jrxmt" auto-focus bindinput="content_paragraphChange" />
+    <picker-view indicator-style="height: 50px;" style="width: 100%; height: 300px;" value="{{value}}" bindchange="questiontypeChange">
+      <picker-view-column value='0'>
+        <view style="line-height: 50px">
+          请选择分类
+        </view>
+        <view wx:for="{{type_list}}" wx:for-index="typesindex" wx:key="{{types.id}}" wx:for-item="types" style="line-height: 50px">
+          {{types.name}}
+        </view>
+      </picker-view-column>
+    </picker-view>
+    <button formType="submit" class="aniu">添加</button>
+  </form>
+</view>

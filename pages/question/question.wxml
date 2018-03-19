@@ -1,6 +1,6 @@
-<!-- <view style='margin-bottom:100rpx'>
+<view style='margin-bottom:100rpx'>
 <button class='addq' bindtap="addquestion">添加</button>
- </view> -->
+ </view>
  <view>
 <view class="xwl"   wx:for="{{list}}" wx:key="{{item.id}}">
   <view class="xwt">

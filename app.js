@@ -28,12 +28,14 @@ App({
                     url: '../content/content'
                   })
                 }, 2000)
-              }else if(res.data.status == 'success'){
-                wx.navigateTo({
-                  url: '../question/question'
-                })
-              } 
-              
+              } else if (res.data.status == 'success') {
+                setTimeout(() => {
+                  wx.navigateTo({
+                    url: '../question/question'
+                  })
+                }, 2000)
+              }
+
               else {
                 wx.showToast({
                   title: '网络错误请稍后重试',
