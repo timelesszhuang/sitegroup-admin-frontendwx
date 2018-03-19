@@ -1,0 +1,20 @@
+ <view class='xwrb'> 问答展示</view>
+  <view class="xwr">
+  <!-- <form bindsubmit="formSubmit" bindreset="formReset">
+    <input name="user_name" class="jrxm" placeholder="问题" />
+    <input name="password" password class="jrxm" placeholder="密码" />
+    <textarea placeholder="答案" class="jrxmt" auto-focus />
+    <button formType="submit" class="aniu">添加</button>
+  </form> -->
+</view> 
+<!-- 
+<rich-text nodes="{{question}}" bindtap="tap"></rich-text>  -->
+ {{question.question}}
+<!-- {{question.content_paragraph}} -->
+<view style='color:red'> 分类： </view>
+ {{question.type_name}}
+<view style='color:red'> 答案：</view>
+<import src="../../wxParse/wxParse.wxml"/> 
+<view class="wxParse">
+    <template is="wxParse" data="{{wxParseData:article.nodes}}"/>
+</view>

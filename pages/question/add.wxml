@@ -1,9 +1,0 @@
-<view class='xwrb'> 添加问答</view>
-<view class="xwr">
-  <form bindsubmit="formSubmit" bindreset="formReset">
-    <input name="user_name" class="jrxm" placeholder="问题" />
-    <!-- <input name="password" password class="jrxm" placeholder="密码" /> -->
-    <textarea placeholder="答案" class="jrxmt" auto-focus />
-    <button formType="submit" class="aniu">添加</button>
-  </form>
-</view>

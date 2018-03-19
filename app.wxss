@@ -16,7 +16,7 @@
   overflow: hidden;
   padding: 10px 0;
   border-bottom: 1px dashed #e6e6e6;
-  height: 200rpx;
+  height: 160rpx;
 }
 
 .xwt {
